@@ -10,13 +10,15 @@
 #include "functions.h"
 #include "functions.cpp"
 
+//driver file for the database application. It runs a loop until the user enters q
+
 
 using namespace std;
 using namespace MSHIMA001;
 int main(void){
    string word;
    string number , id;
-  
+  //infinite loop.
    for(;;){
       printmenu();
       cout<<"Enter a number (or q to quit) and press return."<<endl;
@@ -80,6 +82,7 @@ int main(void){
                   getline(cin, number);
                   
                   while(!printrecord(number)){
+                  // if unknown id is entered keep asking until user quits.
                      cout<<"Student number not found, enter student number, enter x to quit"<<endl;
                      getline(cin, number);
                      if(number.compare("x")==0){

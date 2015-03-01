@@ -7,7 +7,7 @@
 #include <fstream>
 
 #include "student.h"
-
+//file containing declarations methods used in the driver file.
 
 using namespace std;
 vector<MSHIMA001::student> records;
