@@ -77,7 +77,15 @@ int main(void){
                   string number;
                   cout<<"Which student do you want to look up?"<<endl;
                   getline(cin, number);
-                  printrecord( number);
+                  
+                  while(!printrecord(number)){
+                     cout<<"Student number not found, enter student number, enter x to quit"<<endl;
+                     getline(cin, number);
+                     if(id.compare("x")==0){
+                        break;
+                     }
+                     
+
                   break;
                
                }
@@ -89,7 +97,9 @@ int main(void){
                   while(!printmean(records,id)){
                      cout<<"Student number not found, enter student number, enter x to quit"<<endl;
                      getline(cin, id);
-                     if(id.compare())
+                     if(id.compare("x")==0){
+                        break;
+                     }
                      
                   
                   }

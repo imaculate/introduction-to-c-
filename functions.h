@@ -9,7 +9,7 @@
 using namespace std;
 namespace MSHIMA001{
    void clear(void);
-   void printrecord(vector<student> records, string number);
+   bool printrecord(vector<student> records, string number);
    bool printmean(vector<student> records,string id);
    void printmenu();
    void printdatabase();
