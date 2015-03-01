@@ -86,7 +86,7 @@ int main(void){
                         break;
                      }
                      
-
+                  }
                   break;
                
                }
@@ -122,9 +122,9 @@ int main(void){
                   
                }
          }
-      }
+      
       }else{
-         cout<<"Exit!"<<endl;
+         cout<<"Bye!"<<endl;
          break;
       
       }

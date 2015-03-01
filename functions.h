@@ -8,9 +8,10 @@
 
 using namespace std;
 namespace MSHIMA001{
+   void addstudent(MSHIMA001::student New);
    void clear(void);
-   bool printrecord(vector<student> records, string number);
-   bool printmean(vector<student> records,string id);
+   bool printrecord( string number);
+   bool printmean(string id);
    void printmenu();
    void printdatabase();
    void savedatabase();
