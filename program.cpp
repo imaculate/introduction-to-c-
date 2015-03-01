@@ -15,6 +15,7 @@ using namespace std;
 using namespace MSHIMA001;
 int main(void){
    string word;
+   string number , id;
   
    for(;;){
       printmenu();
@@ -74,14 +75,14 @@ int main(void){
             
             case 4:
                {
-                  string number;
+                  
                   cout<<"Which student do you want to look up?"<<endl;
                   getline(cin, number);
                   
                   while(!printrecord(number)){
                      cout<<"Student number not found, enter student number, enter x to quit"<<endl;
                      getline(cin, number);
-                     if(id.compare("x")==0){
+                     if(number.compare("x")==0){
                         break;
                      }
                      
@@ -91,10 +92,10 @@ int main(void){
                }
             case 5:
                {
-                  string id;
+                  
                   cout<<"Which student do you want to grade?"<<endl;
                   getline(cin, id);
-                  while(!printmean(records,id)){
+                  while(!printmean(id)){
                      cout<<"Student number not found, enter student number, enter x to quit"<<endl;
                      getline(cin, id);
                      if(id.compare("x")==0){
@@ -113,7 +114,7 @@ int main(void){
                   break;
                
                }
-            default :
+            default:
                { 
                
                   cout<<"You have entered an invalid choice,Please try again"<<endl;
@@ -122,7 +123,8 @@ int main(void){
                }
          }
       }
-      else{
+      }else{
+         cout<<"Exit!"<<endl;
          break;
       
       }

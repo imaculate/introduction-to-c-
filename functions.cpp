@@ -9,22 +9,31 @@
 
 
 using namespace std;
+vector<MSHIMA001::student> records;
 
 void MSHIMA001::clear(void) { 
    system("clear"); 
 }
 
-void MSHIMA001::printrecord(vector<student> records, string number){
+ void MSHIMA001::addstudent(MSHIMA001::student New){
+   records.push_back(New); 
+ }
+
+
+bool MSHIMA001::printrecord( string number){
+    bool found = false;
    
    for(unsigned i=0;i < records.size(); i++){
       if(records[i].studentnumber.compare(number)==0){
+         found = true;
          cout<<records[i].name << " with student number " << records[i].studentnumber << "has record " << records[i].classrecord<<endl;
       }
    }
+   return found;
 }
 
 
-bool MSHIMA001::printmean(vector<student> records, string id){
+bool MSHIMA001::printmean( string id){
    bool found = false;
    for(unsigned i=0;i< records.size(); i++){
       if(records[i].studentnumber==id){
@@ -66,6 +75,10 @@ void MSHIMA001::printmenu(){
 	
 void MSHIMA001::printdatabase(){
 
-	cout<< "Printdatabase() called"<<endl;
-   cout<<"printing database"<<endl;
+	cout<< "readdatabase() called"<<endl;
+   
+}
+
+void MSHIMA001::savedatabase(){
+   cout<<"savedatabase() called"<<endl;
 }
