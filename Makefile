@@ -1,17 +1,17 @@
 CC=g++
 CCFLAGS=-std=c++11
 program.o: program.cpp functions.o student.h 
-   $(CC) $(CCFLAGS)-g program.cpp
+	$(CC) $(CCFLAGS) -o program.o program.cpp
    
 .cpp.o:
-   $(CC) $(CCFLAGS) -c $<
+	 $(CC) $(CCFLAGS) -c $<
    
 
    
 
    
 run:
-   ./program.o 
+	./program.o 
       
 clean:
-   rm -f *.o
+	rm -f *.o

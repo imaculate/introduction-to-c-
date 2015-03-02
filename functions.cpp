@@ -5,7 +5,6 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-
 #include "student.h"
 //file containing declarations methods used in the driver file.
 
@@ -42,7 +41,8 @@ bool MSHIMA001::printrecord( string number){
       if(records[i].studentnumber==number){
          
          cout<<records[i].name << " with student number " << records[i].studentnumber << " has record " << records[i].classrecord<<endl;
-         return true;
+         
+	return true;
       }
       
    }
@@ -75,7 +75,8 @@ bool MSHIMA001::printmean( string id){
          
             
          cout<<"Student "<< records[i].name<< " with student number " << id <<" has an average of " <<(double)sum/n<< endl; 
-         return true;
+         
+	return true;
       }
    }
 		
@@ -150,4 +151,5 @@ void MSHIMA001::savedatabase(){
    }
    else{ 
       }
+	cout<< "Sucessfully saved database"<<endl;
 }
